@@ -1,0 +1,410 @@
+body {
+    background-color: #1f295b;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    
+    color: #231F20;
+}
+
+.wrapper {
+    padding: 40px 0;
+}
+
+.main-screen {
+    position: relative;
+    max-width: 60vh;
+    min-height: 80vh;
+    max-height: 80vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+
+    background-color: #819dad;
+    box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.desks,
+.cards,
+.create-card,
+.edit-card,
+.learning-mode,
+.learning-mode__block-grades,
+.learning-mode__draft,
+.learning-mode__answer,
+.learning-mode__buttons,
+.viewing-mode,
+.desks__not-created,
+.cards__not-created,
+.overlay {
+    display: none;
+}
+
+
+.create-desk,
+.rename-desk,
+.options,
+.cards__options,
+.delete-confirm,
+.delete-card-confirm,
+.create-card,
+.edit-card {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #8461ca;
+
+    box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+.create-card input, 
+.create-desk input,
+.edit-card input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px;
+
+    color: #231F20;
+}
+
+::placeholder,
+::placeholder {
+    color: #4e4b4c;
+}
+
+.desks._active,
+.cards._active,
+.create-desk._active,
+.rename-desk._active,
+.options._active,
+.cards__options._active,
+.delete-confirm._active,
+.delete-card-confirm._active,
+.create-card._active,
+.edit-card._active,
+.learning-mode._active,
+.learning-mode__block-grades._active,
+.learning-mode__draft._active,
+.learning-mode__answer._active,
+.overlay._active,
+.viewing-mode._active,
+.button-next._active,
+.button-prev._active,
+.viewing-mode__buttons._active,
+.desks__not-created._active,
+.cards__not-created._active {
+    display: block;
+}
+
+.learning-mode__buttons._active {
+    display: flex;
+}
+
+.create-desk__buttons,
+.rename-desk__buttons,
+.options__buttons,
+.delete-confirm__buttons,
+.delete-card-confirm__buttons,
+.create-card__buttons,
+.edit-card__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desk,
+.card {
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.learning-mode__view-answer,
+.learning-mode__skip-question {
+    padding: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    position: absolute;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #8461ca;
+}
+
+.learning-mode__view-answer {
+    left: 10px;
+}
+
+.learning-mode__skip-question {
+    right: 10px;
+}
+
+.learning-mode__draft {
+    height: 200px;
+    width: 200px;
+}
+
+.desk__options,
+.card__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.desk,
+.card,
+.options__rename-desk,
+.options__delete-desk,
+.create-desk__ok,
+.create-desk__cancel,
+.rename-desk__ok,
+.rename-desk__cancel,
+.delete-confirm__ok,
+.delete-confirm__cancel,
+.delete-card-confirm__ok,
+.delete-card-confirm__cancel,
+.create-card__ok,
+.create-card__cancel,
+.edit-card__ok,
+.edit-card__cancel,
+.options__rename-card,
+.options__delete-card,
+.learning-mode__view-answer,
+.learning-mode__skip-question,
+.learning-mode__block-grades,
+.button-next,
+.button-prev {
+    cursor: pointer;
+}
+
+
+.cards__come-back,
+.learning-mode__come-back,
+.viewing-mode__come-back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.cards__buttons {
+    display: flex;
+}
+
+.buttons__modes {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.buttons__learn,
+.buttons__view {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-image: url(../icons/plus.svg);
+}
+
+.button__mode, .btn, .come-back {
+    background-color: #8461ca;
+    cursor: pointer;
+}
+
+.come-back {
+    position: relative;
+}
+
+.come-back::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background-image: url(../icons/arrow-back.svg);
+    background-repeat: no-repeat;
+}
+
+.cards__name-desk {
+    text-align: center;
+    font-size: 24px;
+}
+
+.desks__wrap,
+.cards__wrap {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    bottom: 80px;
+    right: -5px;
+    overflow-y: scroll;
+}
+
+.cards__wrap {
+    top: 70px;
+}
+
+
+.desks__desk,
+.cards__card {
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    transition: all ease 0.1s;
+}
+
+.desks__desk:hover,
+.cards__card:hover  {
+    background-color: #637580;
+}
+
+
+.desk__options,
+.card__options {
+    position: relative;
+    background-color: #8461ca;
+}
+
+.desk__options::before,
+.card__options::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 15px;
+    height: 10px;
+    background-image: url(../icons/dots.svg);
+}
+
+.desk__options:hover {
+    background-color: #6743b1;
+}
+
+.options__rename-desk,
+.options__rename-card {
+    margin-right: 20px;
+}
+
+.desk__wrap-info,
+.card__wrap-info {
+    display: flex;
+}
+
+.desk__percent,
+.card__percent {
+    margin-right: 10px;
+} 
+
+.learning-mode__question {
+    padding-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.learning-mode__draft {
+    background-color: #697d88;
+    border: none;
+    outline: none;
+
+    width: 100%;
+    font-size: 18px;
+
+}
+
+.viewing-mode__question {
+    margin-top: 30px;
+}
+
+
+.viewing-mode__buttons,
+.viewing-mode__button {
+    display: none;
+}
+
+.viewing-mode__button {
+    background-color: #8461ca;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.button-prev {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.button-next {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+    z-index: 4;
+}
+
+::-webkit-scrollbar {
+    width: 5px;          
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;  
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
