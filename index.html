@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main-screen">
+            <div class="desks__not-created">You don't have desks. To create a desk, click on the "+".</div>
+            <div class="cards__not-created">There are no cards in this deck. To create a card, click on the "+".</div>
+            <div class="desks" aria-disabled="false">
+                <div class="desks__wrap"></div>
+                <div class="desks__btn btn"></div>
+                <div class="desks__create-desk create-desk">
+                    <input type="text" class="create-desk__input" value="" placeholder="Input name desk">
+                    <div class="create-desk__buttons">
+                        <div class="create-desk__cancel">Cancel</div>
+                        <div class="create-desk__ok">OK</div>
+                    </div>
+                </div>
+                <div class="desks__rename-desk rename-desk">
+                    <input type="text" class="rename-desk__input" value="" placeholder="Input name desk">
+                    <div class="rename-desk__buttons">
+                        <div class="rename-desk__cancel">Cancel</div>
+                        <div class="rename-desk__ok">OK</div>
+                    </div>
+                </div>
+                <div class="desks__options options">
+                    <div class="options__buttons">
+                        <div class="options__rename-desk">Rename</div>
+                        <div class="options__delete-desk">Delete</div>
+                    </div>
+                </div>
+                <div class="desks__delete-confirm delete-confirm">
+                    <div class="delete-confirm__text">Do uou want to delete the desk?</div>
+                    <div class="delete-confirm__buttons">
+                        <div class="delete-confirm__cancel">Cancel</div>
+                        <div class="delete-confirm__ok">OK</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards__come-back come-back"></div>
+                <div class="cards__name-desk">safsdfasfas</div>
+                <div class="cards__wrap"></div>
+                <div class="cards__buttons buttons">
+                    <div class="cards__btn btn"></div>
+                    <div class="buttons__modes modes">
+                        <div class="buttons__learn button__mode">Learn</div>
+                        <div class="buttons__view button__mode">View</div>
+                    </div>
+                </div>
+                <div class="cards__options options">
+                    <div class="options__buttons">
+                        <div class="options__rename-card">Edit</div>
+                        <div class="options__delete-card">Delete</div>
+                    </div>
+                </div>
+                <div class="cards__delete-card-confirm delete-card-confirm">
+                    <div class="delete-card-confirm__text">Do uou want to delete the card?</div>
+                    <div class="delete-card-confirm__buttons">
+                        <div class="delete-card-confirm__cancel">Cancel</div>
+                        <div class="delete-card-confirm__ok">OK</div>
+                    </div>
+                </div>
+            </div>
+            <div class="create-card">
+                <div class="create-card__main">
+                    <div class="create-card__text1">Question:</div>
+                    <textarea class="create-card__input1" value="" placeholder="Input question" rows="8"></textarea>
+                    <div class="create-card__text2">Answer:</div>
+                    <textarea type="text" class="create-card__input2" value="" placeholder="Input answer"></textarea>
+                </div>
+                <div class="create-card__buttons">
+                    <div class="create-card__cancel">Cancel</div>
+                    <div class="create-card__ok">OK</div>
+                </div>
+            </div>
+            <div class="edit-card">
+                <div class="edit-card__main">
+                    <div class="edit-card__text1">Question:</div>
+                    <textarea class="edit-card__input1" value="" placeholder="Input question"></textarea>
+                    <div class="edit-card__text2">Answer:</div>
+                    <textarea class="edit-card__input2" value="" placeholder="Input answer"></textarea>
+                </div>
+                <div class="edit-card__buttons">
+                    <div class="edit-card__cancel">Cancel</div>
+                    <div class="edit-card__ok">OK</div>
+                </div>
+            </div>
+            <div class="learning-mode">
+                <div class="learning-mode__come-back come-back"></div>
+                <div class="learning-mode__question"></div>
+                <textarea value="" class="learning-mode__draft" placeholder="This is a draft, write anything you want here, it is not taken into account when answering"></textarea>
+                <div class="learning-mode__answer">Answer</div>
+                <div class="learning-mode__buttons">
+                    <div class="learning-mode__view-answer">View answer</div>
+                    <div class="learning-mode__skip-question">Skip question</div>
+                </div>
+                <div class="learning-mode__block-grades">
+                    <div class="block-grades__didnt-answer" data-complexity="-5">Didnt answer</div>
+                    <div class="block-grades__hard" data-complexity="0">Hard</div>
+                    <div class="block-grades__normal" data-complexity="5">Normal</div>
+                    <div class="block-grades__easy" data-complexity="10">Easy</div>
+                </div>
+            </div>
+            <div class="viewing-mode">
+                <div class="viewing-mode__come-back come-back"></div>
+                <div class="viewing-mode__question-message">Answer: </div>
+                <div class="viewing-mode__question"></div>
+                <div class="viewing-mode__answer-message">Question: </div>
+                <div class="viewing-mode__answer"></div>
+                <div class="viewing-mode__buttons">
+                    <div class="viewing-mode__button button-prev"><-</div>
+                    <div class="viewing-mode__button button-next">-></div>
+                </div>
+            </div>
+            <div class="card-answer"></div>
+            <div class="overlay"></div>
+        </main>
+    </div>
+    <script type="module" src="./scripts/App.js"></script>
+</body>
+</html>
+
+
+<!--
+
+
+
+
+                <input type="text" class="create-card__input" value="" placeholder="Input name desk">
+                <div class="create-desk__buttons">
+                    <div class="create-desk__cancel">Cancel</div>
+                    <div class="create-desk__ok">OK</div>
+                </div>
+-->
